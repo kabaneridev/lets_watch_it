@@ -1,0 +1,24 @@
+<h2>Updating from version <strong>2.9.4</strong> or earlier:</h2>
+<p>(You can also find these update instructions inside the documentation).</p>
+
+<p>With version 3.0 mtdb has been fully re-written, essentially it's now a different application to prior versions.
+This means that updating from versions prior to 3.0 is a bit more difficult.
+</p>
+
+<p>If you don't need to keep data from older versions (users, links, watchlists etc), easiest way would be to remove old version completely and install fresh copy of 3.0</p>
+
+<p>If you do want to migrate data from older versions, please follow the steps below:
+(If you don't want to loose production time, we'd recommend making a duplicate of your current site and updating that, instead of updating a live site directly.)</p>
+
+<ol>
+<li>Make sure you have at least PHP 5.6 on your server.</li>
+<li><strong>Backup current mtdb database via phpMyAdmin or similar tool. (IMPORTANT!)</strong></li>
+<li><strong>Backup current mtdb files. (IMPORTANT!)</strong></li>
+<li>Delete all files and folders inside old mtdb directory on your server.</li>
+<li>Extract the .zip file you downloaded from CodeCanyon.</li>
+<li>Upload the <strong>contents&nbsp;</strong>of "mtdb/server" folder to the old mtdb folder on your server.</li>
+<li>Copy image files from <strong>avatars</strong> folder from old mtdb directory you have backed up, into <strong>public/storage/avatars</strong> folder.</li>
+<li>Rename <strong>.env.example</strong> file inside mtdb directory on your server to <strong>.env</strong></li>
+<li>Enter your database details and site url inside <strong>.env</strong> file.</li>
+<li>if your database credentials contain stapces, surround them with double quotes. For example <strong>DATABASE_NAME="name with spaces"</strong></li>
+<li>Visit http://yoursite.com/secure/update url and click <strong>Update Now</strong> button. (make sure you are logged in as admin)</li>
